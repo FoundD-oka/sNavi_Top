@@ -1,0 +1,121 @@
+/* style.css */
+
+/* 基本的なスタイル */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0a0a14; /* さらに少し暗く調整 */
+    color: #e0e0e0; /* 基本的な文字色を少し明るく */
+}
+
+/* three.jsの描画領域 */
+#webgl-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: block;
+    outline: none;
+}
+
+/* コンテンツコンテナ */
+.content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none; /* デフォルトではイベントを透過 */
+    text-align: center; /* テキストを中央揃え */
+    padding: 20px; /* 端に寄りすぎないようにパディング */
+    box-sizing: border-box; /* パディングをサイズ計算に含める */
+}
+
+/* テキストとボタンをまとめるコンテナ */
+.text-content {
+    display: flex;
+    flex-direction: column; /* 要素を縦に並べる */
+    align-items: center; /* 水平中央揃え */
+    pointer-events: auto; /* このエリアのイベントは有効にする */
+    max-width: 600px; /* 横幅が広がりすぎないように */
+}
+
+/* アプリタイトル */
+.app-title {
+    font-size: 4.5rem; /* 大きめのサイズ */
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px; /* 下のマージン */
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* 少し光るような影 */
+}
+
+/* アプリ概要 */
+.app-description {
+    font-size: 1.2rem;
+    color: #c0c0c0; /* 少し落ち着いた色 */
+    margin-bottom: 40px; /* ボタンとのマージン */
+    line-height: 1.6;
+    max-width: 80%; /* 説明文が長すぎないように */
+}
+
+/* ログインボタンのスタイル (微調整) */
+.login-button {
+    padding: 16px 50px; /* 少し横長に */
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(45deg, #4a90e2, #7b43ef); /* グラデーション調整 */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-out, box-shadow 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    /* pointer-events: auto; は .text-content で指定したので不要 */
+}
+
+.login-button:hover {
+    transform: translateY(-3px) scale(1.02); /* 少し大きく、上に */
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.5); /* ホバー時の影を調整 */
+}
+
+.login-button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* レスポンシブ対応（画面が小さい場合） */
+@media (max-width: 768px) {
+    .app-title {
+        font-size: 3rem;
+    }
+    .app-description {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+    .login-button {
+        padding: 14px 40px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-title {
+        font-size: 2.5rem;
+    }
+    .app-description {
+        font-size: 0.9rem;
+    }
+}

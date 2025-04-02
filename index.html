@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sNavi - YouTube台本作成支援</title> <!-- タイトル更新 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- three.jsが描画するCanvas要素 -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- 画面中央にコンテンツを配置するコンテナ -->
+    <div class="content-container">
+        <div class="text-content">
+            <h1 class="app-title">sNavi</h1>
+            <!-- 説明文を更新 -->
+            <p class="app-description">
+                YouTubeコンテンツ 台本作成支援ツール<br>
+                AIを活用して、クオリティの高い台本を効率的に生成することができます。<br><br>
+            </p>
+            <!-- ログインボタン -->
+            <a href="https://script.google.com/macros/s/AKfycbxOKgSLVaBVBgXaTrDUO1rr-Yk4PN6A-ccjSSyzV5IpbacsyGy75mmYUHeJsAdLJyU/exec" class="login-button">ログイン</a>
+        </div>
+    </div>
+
+    <!-- three.js ライブラリの読み込み -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+
+    <!-- three.jsの描画処理を行うJavaScriptファイル -->
+    <script type="module" src="main.js"></script>
+
+</body>
+</html>
