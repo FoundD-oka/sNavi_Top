@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sNavi - YouTube台本作成支援</title> <!-- タイトル更新 -->
     <link rel="stylesheet" href="style.css">
+    <!-- Google Identity Services ライブラリを読み込み -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
 
@@ -20,8 +22,21 @@
                 YouTubeコンテンツ 台本作成支援ツール<br>
                 AIを活用して、クオリティの高い台本を効率的に生成することができます。<br><br>
             </p>
-            <!-- ログインボタン -->
-            <a href="https://script.google.com/macros/s/AKfycbxOKgSLVaBVBgXaTrDUO1rr-Yk4PN6A-ccjSSyzV5IpbacsyGy75mmYUHeJsAdLJyU/exec" class="login-button">ログイン</a>
+            
+            <!-- エラーメッセージ表示エリア -->
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            
+            <!-- Google認証用コンテナ -->
+            <div id="google-signin-container" class="auth-container">
+                <p>サービスを利用するには、ログインしてください</p>
+                <div id="google-signin-button"></div>
+            </div>
+            
+            <!-- ユーザー情報表示エリア（ログイン成功時に表示） -->
+            <div id="user-info-container" class="user-container" style="display: none;">
+                <p id="user-info"></p>
+                <a href="dashboard.html" class="dashboard-button">ダッシュボードへ</a>
+            </div>
         </div>
     </div>
 
@@ -44,6 +59,9 @@
 
     <!-- three.jsの描画処理を行うJavaScriptファイル -->
     <script type="module" src="main.js"></script>
+    
+    <!-- 認証処理を行うJavaScriptファイル -->
+    <script type="module" src="auth.js"></script>
 
 </body>
 </html>
