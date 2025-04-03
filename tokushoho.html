@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特定商取引法に基づく表記 - sNavi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 特定商取引法ページのみにoverflowの設定を上書き */
+        body {
+            overflow: auto;
+        }
+        
+        /* 特定商取引法ページ用スタイル */
+        .legal-container {
+            max-width: 800px;
+            margin: 80px auto 100px; /* 下部にマージンを追加（フッターのスペース確保） */
+            padding: 30px;
+            background-color: rgba(10, 10, 20, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            color: #e0e0e0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+        
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        .legal-table th, .legal-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        
+        .legal-table th {
+            width: 30%;
+            background-color: rgba(74, 144, 226, 0.2);
+        }
+        
+        .back-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .back-button a {
+            display: inline-block;
+            padding: 10px 25px;
+            background: linear-gradient(45deg, #4a90e2, #7b43ef);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- three.jsが描画するCanvas要素 -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <div class="legal-container">
+        <h1>特定商取引法に基づく表記</h1>
+        
+        <table class="legal-table">
+            <tr>
+                <th>販売業者</th>
+                <td>Found Design</td>
+            </tr>
+            <tr>
+                <th>運営統括責任者</th>
+                <td>岡田 健一</td>
+            </tr>
+            <tr>
+                <th>所在地</th>
+                <td>〒605-0811 京都府京都市東山区小松町153-1</td>
+            </tr>
+            <tr>
+                <th>電話番号</th>
+                <td>080-4331-7942</td>
+            </tr>
+            <tr>
+                <th>メールアドレス</th>
+                <td>found.d.oka@gmail.com</td>
+            </tr>
+            <tr>
+                <th>販売価格</th>
+                <td>
+                    クレジット1,000ポイント：1,000円（税込）<br>
+                    クレジット5,000ポイント：5,000円（税込）<br>
+                    クレジット10,000ポイント：10,000円（税込）
+                </td>
+            </tr>
+            <tr>
+                <th>商品代金以外の必要料金</th>
+                <td>なし</td>
+            </tr>
+            <tr>
+                <th>支払方法</th>
+                <td>クレジットカード決済</td>
+            </tr>
+            <tr>
+                <th>支払時期</th>
+                <td>クレジットカード決済：ご注文時にお支払いが確定します。</td>
+            </tr>
+            <tr>
+                <th>サービス提供時期</th>
+                <td>決済完了後、即時にクレジットがアカウントに付与され、サービスをご利用いただけます。</td>
+            </tr>
+            <tr>
+                <th>返品・キャンセル</th>
+                <td>デジタルコンテンツの特性上、購入後の返品・キャンセルはお受けできません。</td>
+            </tr>
+            <tr>
+                <th>動作環境</th>
+                <td>当サービスは最新のウェブブラウザでのご利用を推奨しております。</td>
+            </tr>
+        </table>
+        
+        <div class="back-button">
+            <a href="index.html">トップページに戻る</a>
+        </div>
+    </div>
+
+    <!-- three.js ライブラリの読み込み -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+
+    <!-- three.jsの描画処理を行うJavaScriptファイル -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>

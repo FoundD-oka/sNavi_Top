@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弊社について - sNavi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 弊社についてページのみにoverflowの設定を上書き */
+        body {
+            overflow: auto;
+        }
+        
+        /* 弊社についてページ用スタイル */
+        .about-container {
+            max-width: 800px;
+            margin: 80px auto 100px; /* 下部にマージンを追加（フッターのスペース確保） */
+            padding: 30px;
+            background-color: rgba(10, 10, 20, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            color: #e0e0e0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            font-size: 1.6rem;
+            color: #4a90e2;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        .section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .service-card {
+            background-color: rgba(74, 144, 226, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            color: #7b43ef;
+            margin-bottom: 15px;
+        }
+        
+        .company-info {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .company-info p {
+            margin: 5px 0;
+        }
+        
+        .back-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .back-button a {
+            display: inline-block;
+            padding: 10px 25px;
+            background: linear-gradient(45deg, #4a90e2, #7b43ef);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(74, 144, 226, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- three.jsが描画するCanvas要素 -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <div class="about-container">
+        <h1>弊社について</h1>
+        
+        <div class="section">
+            <h2>Found Design</h2>
+            <p>ChatGPTを始めとしたAIの登場は全産業に大きく影響を与えました。<br>
+            ですがAIは完璧な存在ではありません。人間にしか出来ないことは多く存在します。</p>
+            <p>AIに任せられることは任せる。そうして時間を作り、本質的なことを人が行う。<br>
+            そのお手伝いを弊社にお任せください。</p>
+        </div>
+        
+        <div class="section">
+            <h2>事業内容</h2>
+            
+            <div class="service-card">
+                <h3>包括的なDXのご提案</h3>
+                <p>「AIを使ってみたい」「手動の業務が多くて効率が悪い」「DXはよくわからない」そんな方向けに最適な打ち手を提案します。まずはお気軽にご相談ください。きっと何かでお役に立てるはずです。</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>企業向けChatGPT『AI Works』</h3>
+                <p>Azureをベースにセキュアな環境で社内資料を長期学習可能なGPT環境を構築します。専任のAIエンジニアによる安心のサポート付きです。</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>法人リスキリング 「ワークショップ」</h3>
+                <p>単なる理解に留めず、実践的なトレーニングで身につける1対Nのオンライン型学習を行います。内容をライブ型で実践アウトプットで学習の定着を図り、確実性高くリスキリングを成功に導きます。</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>会社情報</h2>
+            <div class="company-info">
+                <p>会社名：Found Design</p>
+                <p>住所：〒605-0811 京都市東山区小松町153-1</p>
+                <p>電話：080-4331-7942</p>
+            </div>
+        </div>
+        
+        <div class="back-button">
+            <a href="index.html">トップページに戻る</a>
+        </div>
+    </div>
+
+    <!-- three.js ライブラリの読み込み -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+            }
+        }
+    </script>
+
+    <!-- three.jsの描画処理を行うJavaScriptファイル -->
+    <script type="module" src="main.js"></script>
+</body>
+</html> 
