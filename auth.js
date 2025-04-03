@@ -4,7 +4,7 @@
 const GOOGLE_CLIENT_ID = '396737896899-fsg5tdvm14gbbjuqs4dq4d0vs4hm72p3.apps.googleusercontent.com';
 
 // GASアプリのデプロイメントURL
-const GAS_DEPLOYMENT_URL = 'https://script.google.com/macros/s/AKfycbyECiCsy8vcWC8WOBzdQCJndJwtEccOWKuCZIWUhxR8qiJY15CrYQu6ludHFHOFX8cn/exec';
+const GAS_DEPLOYMENT_URL = 'https://script.google.com/macros/s/AKfycbyTdpuI0_SBaVS0AieOPRY2nNbQez2r8Ph8AQqim35bOpOPrZuiaI8B39VY7XfFKdGp/exec';
 
 // 認証状態を保持する変数
 let idToken = null;
