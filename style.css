@@ -149,6 +149,74 @@ body, html {
     text-decoration: underline;
 }
 
+/* フッターのコピーライト */
+.footer p.copyright {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* レスポンシブ対応（フッター） */
+@media (max-width: 480px) {
+    .footer-links {
+        gap: 15px;
+    }
+    
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+}
+
+/* コンテンツページ共通スタイル */
+.content-page {
+    max-width: 800px; /* about.html などと合わせる */
+    margin: 80px auto 100px; /* 上下左右にマージン */
+    padding: 30px;
+    background-color: rgba(10, 10, 20, 0.8); /* 背景色 */
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    color: #e0e0e0;
+    position: relative; /* z-index を有効にするため */
+    z-index: 1;
+}
+
+.content-page h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.content-page h2 {
+    font-size: 1.6rem;
+    color: #4a90e2;
+    margin-top: 30px; /* h2の上マージン */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.content-page p,
+.content-page ul {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content-page ul {
+    padding-left: 20px;
+}
+
+.content-page li {
+    margin-bottom: 5px;
+}
+
+/* privacy.html, terms.html 用のヘッダースタイル */
+.content-page + footer {
+    /* .content-page の margin-bottom とフッターの高さで調整 */
+    /* フッターが fixed なので、これ以上の調整は不要かも */
+}
+
 /* レスポンシブ対応（フッター） */
 @media (max-width: 480px) {
     .footer-links {
